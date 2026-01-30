@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import Navigation from './components/Navigation';
 import Hero from './components/Hero';
 import Manifesto from './components/Manifesto';
 import Expertise from './components/Expertise';
@@ -11,7 +11,7 @@ const App: React.FC = () => {
   return (
     <>
       <CustomCursor />
-      <Navbar />
+      <Navigation />
       <main>
         <Hero />
         <Manifesto />
