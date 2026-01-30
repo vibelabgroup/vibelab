@@ -5,15 +5,16 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
  const env = loadEnv(mode, '.', '');
  return {
- server: {
- port: 3000,
- host: '0.0.0.0',
- },
- preview: {
- port: 3000,
- host: '0.0.0.0',
- allowedHosts: ['vibelab.cloud'],
- },
+    server: {
+      port: 3000,
+      host: '0.0.0.0',
+      allowedHosts: ['vibelab.cloud'] // Add here for 'npm run dev'
+    },
+    preview: {
+      port: 3000,
+      host: '0.0.0.0',
+      allowedHosts: ['vibelab.cloud'] // Add here for 'npm run preview'
+    },
  plugins: [react()],
  define: {
  'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
